@@ -1,0 +1,9 @@
+protocol Sample {
+  record SampleItem {
+    string name;
+  }
+  error SampleError {
+    string message;
+  }
+  SampleItem getSampleItem(SampleItem action) throws SampleError;
+}
