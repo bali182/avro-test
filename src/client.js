@@ -11,7 +11,7 @@ function transport(callback) {
     .on('error', callback)
 }
 
-const client = service.createClient({ transport })
+const client = service.createClient({ transport, buffering: true })
 
 client.getSampleItem({ name: 'ImASample' }, (error, item) => {
   console.log(error, item)
